@@ -1,11 +1,9 @@
 import random
 from PIL import Image
 
-r = round(random.random() * 255)
-g = round(random.random() * 255)
-b = round(random.random() * 255)
-
-colors = (r, g, b)
+colors_list = random.sample(range(1,255), 3)
+colors = tuple(colors_list)
 print(colors)
+
 img = Image.new('RGB', (500, 500), colors)
 img.show()
