@@ -6,4 +6,4 @@ colors = tuple(colors_list)
 print(colors)
 
 img = Image.new('RGB', (500, 500), colors)
-img.show()
+#img.save(str(colors).replace(')','').replace('(','').replace(',','-') + ".png")
