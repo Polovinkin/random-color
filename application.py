@@ -3,10 +3,8 @@ import os
 import random
 from PIL import Image
 
-PEOPLE_FOLDER = os.path.join('serving_static', 'pics')
-
-app = Flask(__name__, template_folder='serving_static/templates')
-app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
+app = Flask(__name__, template_folder='static/templates')
+app.config['UPLOAD_FOLDER'] = os.path.join('static', 'pics')
 
 @app.route('/')
 def show_index():
